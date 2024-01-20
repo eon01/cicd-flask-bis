@@ -5,4 +5,4 @@
 - name: Generate values file for {{ env }}
   template:
     src: templates/values.yaml.j2
-    dest: ../charts/cicd-flask/values_{{ env }}.yaml
+    dest: "{{ playbook_dir }}/../charts/cicd-flask/values_{{ env }}.yaml"

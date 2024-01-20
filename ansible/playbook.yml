@@ -1,10 +1,11 @@
+---
 - name: Generate values files
   hosts: localhost
   connection: local
   gather_facts: false
 
   tasks:
-    - name: Handle each environment
+    - name: Handle each environment for environment_tasks
       include_tasks: environment_tasks.yml
       loop:
         - dev
@@ -17,3 +18,12 @@
       template:
         src: templates/Chart.yaml.j2
         dest: ../charts/cicd-flask/Chart.yaml
+
+    - name: Handle each environment for argocd_tasks
+      include_tasks: argocd_tasks.yml
+      loop:
+        - dev
+        - staging
+        - prod
+      vars:
+        env: "{{ item }}"

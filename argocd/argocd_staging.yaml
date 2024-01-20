@@ -1,0 +1,22 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: cicd-flask-staging
+  namespace: argocd
+spec:
+  destination:
+    namespace: default
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    chart: cicd-flask
+    repoURL: https://eon01.github.io/cicd-flask-bis/
+    targetRevision: 0.2.11
+    helm:
+      valueFiles:
+      - values_staging.yaml
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+      allowEmpty: true

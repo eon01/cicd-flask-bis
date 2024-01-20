@@ -1,0 +1,8 @@
+---
+- name: Include environment-specific variables
+  include_vars: "group_vars/{{ env }}.yaml"
+
+- name: Generate Argo CD YAML file for {{ env }}
+  template:
+    src: templates/argocd.yaml.j2
+    dest: "{{ playbook_dir }}/../argocd/argocd_{{ env }}.yaml"

@@ -18,3 +18,4 @@ ingress_paths:
     pathType: Prefix
 ingress_tls: []
 autoscaling_enabled: false
+argocd_app_destination_server: https://kubernetes.default.svc
