@@ -1,8 +1,15 @@
 ---
 docker_username: 
 docker_repository_name: 
-helm_chart_name: 
+helm_chart_name: cicd-flask
 helm_chart_description: A Helm chart for Kubernetes!
 # use different versions from the previous one to trigger a new Helm release
 helm_release_version: 0.2.11
 helm_app_version: 1.16.1
+## new variables
+argocd_app_name: cicd-flask-{{ env }}
+argocd_app_namespace: argocd
+argocd_app_destination_namespace: default
+argocd_app_project: default
+github_username: eon01
+github_repository_name: cicd-flask-bis
