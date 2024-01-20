@@ -1,0 +1,8 @@
+---
+docker_username: 
+docker_repository_name: 
+helm_chart_name: 
+helm_chart_description: A Helm chart for Kubernetes!
+# use different versions from the previous one to trigger a new Helm release
+helm_release_version: 0.2.11
+helm_app_version: 1.16.1
