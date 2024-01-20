@@ -12,6 +12,16 @@ entries:
     - https://github.com/eon01/cicd-flask-bis/releases/download/cicd-flask-0.2.11/cicd-flask-0.2.11.tgz
     version: 0.2.11
   - apiVersion: v2
+    appVersion: 1.16.1
+    created: "2024-01-20T13:11:24.663043266Z"
+    description: A Helm chart for Kubernetes!
+    digest: 84e33bdd46c1b68a27b07e015adefeb42814946ed3ca38b5d6acdda9a088ed4a
+    name: cicd-flask
+    type: application
+    urls:
+    - https://github.com/eon01/cicd-flask-bis/releases/download/cicd-flask-0.2.0/cicd-flask-0.2.0.tgz
+    version: 0.2.0
+  - apiVersion: v2
     appVersion: 1.16.0
     created: "2024-01-20T07:41:44.459100462Z"
     description: A Helm chart for Kubernetes
@@ -21,4 +31,4 @@ entries:
     urls:
     - https://github.com/eon01/cicd-flask-bis/releases/download/cicd-flask-0.1.0/cicd-flask-0.1.0.tgz
     version: 0.1.0
-generated: "2024-01-20T11:26:48.761754791Z"
+generated: "2024-01-20T13:11:24.663082919Z"
