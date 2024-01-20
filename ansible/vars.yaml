@@ -4,5 +4,5 @@ docker_repository_name: cicd-flask-docker
 helm_chart_name: cicd-flask
 helm_chart_description: A Helm chart for Kubernetes!
 # use different versions from the previous one to trigger a new Helm release
-helm_release_version: 0.2.12
-helm_app_version: 1.16.2
+helm_release_version: 0.2.22
+helm_app_version: 1.16.22
