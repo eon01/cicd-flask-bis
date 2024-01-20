@@ -27,3 +27,6 @@ ingress:
         - path: /tasks
           pathType: Prefix
 
+
+autoscaling:
+  enabled: False
