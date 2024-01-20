@@ -1,7 +1,7 @@
 
 
 image:
-  repository: /
+  repository: eon0x1/cicd-flask-docker
   pullPolicy: IfNotPresent
   tag: "latest"
 imagePullSecrets: []
