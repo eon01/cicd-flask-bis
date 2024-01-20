@@ -20,7 +20,7 @@ ingress:
   annotations:
     kubernetes.io/ingress.class: nginx
   hosts:
-    - host: flask.209.38.176.143.nip.io
+    - host: flask-prod.209.38.176.143.nip.io
       paths:
         - path: /tasks
           pathType: Prefix

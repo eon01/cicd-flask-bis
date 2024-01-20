@@ -11,7 +11,7 @@ spec:
   source:
     chart: cicd-flask
     repoURL: https://eon01.github.io/cicd-flask-bis/
-    targetRevision: 0.2.22
+    targetRevision: 0.2.33
     helm:
       valueFiles:
       - values_dev.yaml
