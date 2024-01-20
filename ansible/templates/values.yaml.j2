@@ -39,4 +39,7 @@ autoscaling:
   minReplicas: {{ autoscaling_minReplicas | default(1) }}
   maxReplicas: {{ autoscaling_maxReplicas | default(100) }}
   targetCPUUtilizationPercentage: {{ autoscaling_targetCPUUtilizationPercentage | default(80) }}
+{% else %}
+autoscaling:
+  enabled: {{ autoscaling_enabled | default(false) }}
 {% endif %}

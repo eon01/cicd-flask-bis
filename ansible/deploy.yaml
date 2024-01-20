@@ -1,0 +1,20 @@
+---
+- name: Deploy Application to Selected Environment
+  hosts: localhost
+  gather_facts: false
+  vars:
+    env: "dev"
+
+  tasks:
+    - name: Ensure the env variable is set
+      fail:
+        msg: "The 'env' variable is not set. Please set it to 'dev', 'staging', or 'prod' before running this playbook."
+      when: env not in ['dev', 'staging', 'prod']
+
+    - name: Deploy the application to the selected environment
+      shell: kubectl apply -f "{{ playbook_dir }}/../argocd/argocd_{{ env }}.yaml"
+      become: yes
+
+
+      ignore_errors: yes
+
